@@ -1,11 +1,10 @@
-import { BackgroundBeams } from '@/components/ui/background-beams';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center">
+    <div className="relative flex min-h-svh flex-col items-center justify-center">
       <Image
         src="https://www.svgrepo.com/show/426192/cogs-settings.svg"
         alt="Logo"
@@ -29,7 +28,6 @@ export default function Home() {
           </Link>
         </Button>
       </div>
-      <BackgroundBeams className="-z-10" />
     </div>
   );
 }
