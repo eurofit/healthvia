@@ -11,6 +11,6 @@ trim_trailing_whitespace = true
 # (change these if your Prettier config differs)
 end_of_line = lf
 indent_style = space
-indent_size = 4
+indent_size = 2
 # Caveat: Prettier won’t enforce a maximum line length, but your editor might.
 max_line_length = 80
