@@ -1,4 +1,4 @@
-import { publicUrl } from '@env';
+import { publicUrl } from '@/env.mjs';
 
 export const site = {
     name: 'Healthvia',
