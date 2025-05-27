@@ -1,3 +1,4 @@
+import { ReloadButton } from '@/components/reload-button';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,15 +19,11 @@ export default function Home() {
       </p>
       <div className="flex space-x-4">
         <Button className="font-medium" size="lg" asChild>
-          <Link href="#" prefetch={false}>
-            Contact Us
-          </Link>
+          <Link href="/contact-us">Contact Us</Link>
         </Button>
-        <Button className="font-medium" variant="outline" size="lg" asChild>
-          <Link href="#" prefetch={false}>
-            Reload
-          </Link>
-        </Button>
+        <ReloadButton className="font-medium" size="lg">
+          Reload Page
+        </ReloadButton>
       </div>
     </div>
   );
