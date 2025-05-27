@@ -21,10 +21,6 @@ import { toast } from 'sonner';
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{
-    type: 'success' | 'error' | null;
-    message: string;
-  }>({ type: null, message: '' });
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -38,7 +34,6 @@ export function ContactForm() {
 
   const onSubmit = async (values: ContactFormValues) => {
     setIsSubmitting(true);
-    setSubmitStatus({ type: null, message: '' });
 
     try {
       const emailPromise = sendContactEmail(values);
@@ -64,10 +59,6 @@ export function ContactForm() {
       });
     } catch (error) {
       setIsSubmitting(false);
-      setSubmitStatus({
-        type: 'error',
-        message: 'Failed to send your message. Please try again later.',
-      });
       console.error('Error sending contact email:', error);
     }
   };
